@@ -3,17 +3,14 @@
 public class Main {
     public static void main(String[] args) {
 
-        byte a = 3;
-        short b = 5;
-        long c = 182L;
-        float f = 543.5F;
-        double h = 443.3F;
+        int bcol = 5, bc = 80;
+        int mcol = 2, mc = 105;
+        int mocol = 2, moc = 100;
+        int ycol = 4, yc = 70;
+        int sum = (bcol * bc) + (mcol * mc) + (mocol * moc) + (ycol * yc);
+        float sumk = sum / 1000F;
 
-        System.out.println("Значение переменной a s tipom byte ravno " + a);
-        System.out.println("Значение переменной b s tipom short ravno " + b);
-        System.out.println("Значение переменной c s tipom long ravno " + c);
-        System.out.println("Значение переменной f s tipom float ravno " + f);
-        System.out.println("Значение переменной h s tipom double ravno " + h);
+        System.out.println("Gramm " + sum + " Kilogramm " + sumk);
 
 
     }
