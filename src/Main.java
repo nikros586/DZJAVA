@@ -1,10 +1,12 @@
 public class Main {
     public static void main(String[] args) {
 
-        for (int i = 0; i < 21; i++) {
-            if (i%2 == 0) {
-                System.out.println(i);
-            }
+        int g = 7;
+
+        for (int i = 0; i < 14; i++) {
+            System.out.print(g);
+            System.out.print(" ");
+            g += 7;
         }
     }
 }
