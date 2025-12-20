@@ -3,12 +3,13 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int i = 2, sum = 1;
-        while (i != 100){
-            sum += i;
+        int i = 1;
+        int g = (int)(Math.random() * 20);
+        while (g != 15){
+            g = (int)(Math.random() * 20);
             i++;
         }
-        System.out.println(sum);
+        System.out.println(i);
 
     }
 }
