@@ -1,11 +1,13 @@
+import javax.swing.*;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-
-        int g = 12000;
-
-        for (int i = 1; i < 13; i++) {
-            System.out.print("Mecяц: " + i + " Сумма накоплений: " + g + "\n");
-            g += 12000;
+        for(int i = 0; i < 50; i++){
+            if(i%2 == 0){
+                System.out.println(i);
+            }
         }
+
     }
 }
