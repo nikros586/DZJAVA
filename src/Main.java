@@ -3,11 +3,11 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        String j = "qwerty";
-        int og = 2;
-        int price = 1000;
-
-        System.out.println("You buy " + j + " kolichestvo " + og + " price " + price*og);
+        Main main = new Main();
+        main.one(5, 7);
+    }
+    public void one(int a, int b){
+        System.out.println(a*b);
     }
 
 }
