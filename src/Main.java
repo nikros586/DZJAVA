@@ -4,10 +4,10 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         String j = "qwerty";
+        int og = 2;
+        int price = 1000;
 
-        System.out.println(j.substring(3));
-        System.out.println(j.toUpperCase());
-        System.out.println(j.indexOf("r"));
+        System.out.println("You buy " + j + " kolichestvo " + og + " price " + price*og);
     }
 
 }
