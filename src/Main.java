@@ -5,9 +5,9 @@ public class Main {
     public static void main(String[] args) {
         String j = "qwerty";
 
-        System.out.println(j.length());
-        System.out.println(j.charAt(0));
-        System.out.println(j.contains("Java"));
+        System.out.println(j.substring(3));
+        System.out.println(j.toUpperCase());
+        System.out.println(j.indexOf("r"));
     }
 
 }
