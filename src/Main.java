@@ -3,20 +3,41 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Animal animal = new Animal("Арбуз", "Полосатый");
-        animal.tis();
+        String [] books = {"fun", "time", "mine", "xyz"};
+        Library library = new Library(books);
+        library.addbook("iop");
+        library.allbook();
+        library.findbook("xyz");
     }
 
 }
 
-class Animal{
-    String name;
-    String type;
-    public Animal(String name, String type){
+class Library{
+    String [] name;
+    public  Library(String [] name){
         this.name = name;
-        this.type = type;
     }
-    public void tis(){
-        System.out.println("\u001B[1mЭто " + type + " по имени " + name);
+    public void addbook(String book){
+        name[3] = book;
     }
+    public void allbook(){
+        for(String i  : name){
+            System.out.print(i + " ");
+        }
+    }
+    public void findbook(String book){
+        for (String i : name){
+            if(i == book){
+                System.out.println("Книга есть");
+                break;
+            }
+            if(i == name[3]){
+                System.out.println("Книги нет");
+                break;
+            }
+        }
+
+    }
+
+
 }
