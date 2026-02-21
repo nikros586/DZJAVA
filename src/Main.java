@@ -1,43 +1,32 @@
-import java.util.Scanner;
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
-        String [] books = {"fun", "time", "mine", "xyz"};
-        Library library = new Library(books);
-        library.addbook("iop");
-        library.allbook();
-        library.findbook("xyz");
+        Car car = new Car();
+        Bike bike = new Bike();
+        TransportManager transportManager = new TransportManager();
+        transportManager.startTranspoert(car);
+        transportManager.startTranspoert(bike);
     }
-
 }
 
-class Library{
-    String [] name;
-    public  Library(String [] name){
-        this.name = name;
-    }
-    public void addbook(String book){
-        name[3] = book;
-    }
-    public void allbook(){
-        for(String i  : name){
-            System.out.print(i + " ");
-        }
-    }
-    public void findbook(String book){
-        for (String i : name){
-            if(i == book){
-                System.out.println("Книга есть");
-                break;
-            }
-            if(i == name[3]){
-                System.out.println("Книги нет");
-                break;
-            }
-        }
+interface Transport{
+    void move();
+}
 
+class Car implements Transport{
+    @Override
+    public void move(){
+        System.out.println("Врум врум");
     }
+}
+class Bike implements Transport{
+    @Override
+    public void move(){
+        System.out.println("скрип скрип");
+    }
+}
 
-
+class TransportManager{
+    void startTranspoert(Transport transport){
+        transport.move();
+    }
 }
