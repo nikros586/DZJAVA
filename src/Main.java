@@ -1,32 +1,26 @@
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Car car = new Car();
-        Bike bike = new Bike();
-        TransportManager transportManager = new TransportManager();
-        transportManager.startTranspoert(car);
-        transportManager.startTranspoert(bike);
-    }
-}
+        ArrayList<String> todolist = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        while (true){
+            System.out.println("Что вы хотите сделать?");
+            int a = scanner.nextInt();
+            scanner.nextLine();
+            if(a == 1){
+                String b = scanner.nextLine();
+                todolist.add(b);
+            }
+            else {
+                int c = scanner.nextInt();
+                todolist.remove(c);
+            }
+            System.out.println(todolist);
+        }
 
-interface Transport{
-    void move();
-}
+    }
 
-class Car implements Transport{
-    @Override
-    public void move(){
-        System.out.println("Врум врум");
-    }
-}
-class Bike implements Transport{
-    @Override
-    public void move(){
-        System.out.println("скрип скрип");
-    }
-}
-
-class TransportManager{
-    void startTranspoert(Transport transport){
-        transport.move();
-    }
 }
