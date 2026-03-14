@@ -6,23 +6,29 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
+        Kontact kontact = new Kontact();
+        kontact.add("umniy");
+        kontact.add("glupi");
+        kontact.see();
     }
 }
 
 class Kontact{
-    LinkedHashMap<Integer, Boolean> kontact;
+    TreeMap<String, Integer> kontact;
     public Kontact(){
-        kontact = new LinkedHashMap<>();
+        kontact = new TreeMap<>();
     }
-    public void tr_fls(int bk){
+    public void tr_fls(String bk){
         System.out.println(kontact.get(bk));
     }
-    public void add(int bk){
-        kontact.put(bk, false);
+    public void add(String bk){
+        kontact.put(bk, 5);
     }
-    public void remove(int bk){
+    public void remove(String bk){
         kontact.remove(bk);
+    }
+    public void see(){
+        System.out.println(kontact);
     }
 }
 
