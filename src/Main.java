@@ -1,57 +1,32 @@
 import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Employee employee = new Employee(10, "Name", 10);
-        System.out.println(employee.getAge());
-        System.out.println(employee.getName());
-        System.out.println(employee.getSalary());
 
     }
 }
 
-class Person{
-    private String name;
-    private int age;
-
-    public Person(String name, int age){
-        this.name = name;
-        this.age = age;
+class Book{
+    Map<String, Boolean> books;
+    public Book(){
+        books = new HashMap<>();
     }
-
-    public int getAge(){
-        return age;
+    public void tr_fls(String bk){
+        books.remove(bk);
+        books.put(bk, true);
     }
-    public String getName(){
-        return name;
+    public void add(String bk){
+        books.put(bk, false);
     }
-    public int setAge(int ages){
-        age = ages;
-        return age;
-    }
-    public String setName(String names){
-        name = names;
-        return name;
+    public void remove(String bk){
+        books.remove(bk);
     }
 }
-class Employee extends Person{
-    private int salary;
-    public Employee(int salary, String name, int age){
-        super(name, age);
-        this.salary = salary;
 
-    }
 
-    public int getSalary(){
-        return salary;
-    }
-
-    public int getSalary( int salarys){
-        salary = salarys;
-        return salary;
-    }
-}
 
 
