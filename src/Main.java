@@ -10,20 +10,19 @@ public class Main {
     }
 }
 
-class Book{
-    Map<String, Boolean> books;
-    public Book(){
-        books = new HashMap<>();
+class Kontact{
+    LinkedHashMap<Integer, Boolean> kontact;
+    public Kontact(){
+        kontact = new LinkedHashMap<>();
     }
-    public void tr_fls(String bk){
-        books.remove(bk);
-        books.put(bk, true);
+    public void tr_fls(int bk){
+        System.out.println(kontact.get(bk));
     }
-    public void add(String bk){
-        books.put(bk, false);
+    public void add(int bk){
+        kontact.put(bk, false);
     }
-    public void remove(String bk){
-        books.remove(bk);
+    public void remove(int bk){
+        kontact.remove(bk);
     }
 }
 
