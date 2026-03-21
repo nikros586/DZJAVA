@@ -3,13 +3,13 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        Set<String> user = new HashSet<>();
-        user.add("user6");
-        System.out.println(user);
-        System.out.println(user.contains("User1"));
-
-
-
+        String qwe = "one two one";
+        Set<String> qwe1 = new TreeSet<>();
+        List<String> qwe2 = Arrays.asList(qwe.split("\\s+"));
+        for (String i : qwe2){
+            qwe1.add(i);
+        }
+        System.out.println(qwe1);
 
     }
 
