@@ -3,13 +3,12 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        String qwe = "Guest1 neguest ne ne";
-        Set<String> qwe1 = new TreeSet<>();
-        List<String> qwe2 = Arrays.asList(qwe.split("\\s+"));
-        for (String i : qwe2){
-            qwe1.add(i);
-        }
-        System.out.println(qwe1);
+        List<Integer> numbrs = Arrays.asList(2, 53, 8, 65, 91);
+        List<Integer> numb = numbrs.stream()
+                .filter(num -> num % 2 == 0)
+                .map(num -> num * 3)
+                .collect(Collectors.toList());
+        System.out.println(numb);
 
     }
 
